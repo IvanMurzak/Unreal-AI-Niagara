@@ -5,9 +5,9 @@ of `Unity-AI-Tools-Template`). An extension is a C++ `Type=Editor` UE plugin imp
 `IUnrealMcpToolProvider` that contributes MCP tools to AI Game Developer (Unreal-MCP).
 
 Boilerplate is customized by `commands/init.ps1` (or `commands/init.py`), which renames the
-plugin/module and replaces placeholders (`YOUR_EXTENSION_MODULE`, `YOUR_EXTENSION_ID`,
-`YOUR_EXTENSION_DISPLAY_NAME`, `YOUR_TOOL_ID`, `YOUR_GITHUB_USERNAME_REPOSITORY`,
-`YOUR_FEATURE_PLUGIN`/`YOUR_FEATURE_MODULE`). Changes here propagate to every future extension —
+plugin/module and replaces placeholders (`UnrealAINiagara`, `com.ivanmurzak.unreal-ai-niagara`,
+`Unreal AI Niagara`, `niagara-list-systems`, `IvanMurzak/Unreal-AI-Niagara`,
+`Niagara`/`Niagara`). Changes here propagate to every future extension —
 keep placeholder tokens consistent.
 
 ## The contract (DO read before editing tools)

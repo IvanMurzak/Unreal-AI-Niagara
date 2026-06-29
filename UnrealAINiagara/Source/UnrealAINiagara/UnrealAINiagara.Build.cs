@@ -1,11 +1,11 @@
-// Copyright (c) 2026 YOUR_GITHUB_USERNAME_REPOSITORY. Licensed under the Apache License, Version 2.0.
+// Copyright (c) 2026 IvanMurzak/Unreal-AI-Niagara. Licensed under the Apache License, Version 2.0.
 // See the LICENSE file in the repository root for more information.
 
 using UnrealBuildTool;
 
-public class YOUR_EXTENSION_MODULE : ModuleRules
+public class UnrealAINiagara : ModuleRules
 {
-	public YOUR_EXTENSION_MODULE(ReadOnlyTargetRules Target) : base(Target)
+	public UnrealAINiagara(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -38,8 +38,14 @@ public class YOUR_EXTENSION_MODULE : ModuleRules
 			// `commands/init.ps1 -FeaturePlugin <Name>` wires the matching { "Name": "<Feature>" } entry
 			// into the .uplugin "Plugins" array; uncomment the lines below to take a real code dependency.
 			//   e.g. for Niagara: "Niagara", "NiagaraEditor"
-			// "YOUR_FEATURE_MODULE",
-			// "YOUR_FEATURE_MODULEEditor",
+			"Niagara",
+			"NiagaraEditor",
+
+			// --- Support modules this extension's tools call ----------------------------------------
+			// AssetRegistry: enumerate UNiagaraSystem assets without loading them (niagara-list-systems).
+			// UnrealEd: GEditor + the editor world context for spawning a component (niagara-spawn-component).
+			"AssetRegistry",
+			"UnrealEd",
 		});
 	}
 }

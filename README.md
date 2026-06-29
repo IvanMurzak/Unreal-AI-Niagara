@@ -21,13 +21,13 @@ task needs.
 ## What you get
 
 ```
-YOUR_EXTENSION_MODULE/                                   the UE plugin (renamed by init)
-├── YOUR_EXTENSION_MODULE.uplugin                         descriptor; Plugins: [ UnrealMCP, <feature> ]
-└── Source/YOUR_EXTENSION_MODULE/
-    ├── YOUR_EXTENSION_MODULE.Build.cs                    deps: UnrealMcpRuntime + UnrealMcpEditor (+ your feature)
+UnrealAINiagara/                                   the UE plugin (renamed by init)
+├── UnrealAINiagara.uplugin                         descriptor; Plugins: [ UnrealMCP, <feature> ]
+└── Source/UnrealAINiagara/
+    ├── UnrealAINiagara.Build.cs                    deps: UnrealMcpRuntime + UnrealMcpEditor (+ your feature)
     └── Private/
-        ├── YOUR_EXTENSION_MODULEModule.cpp               provider + module (1 sample tool)
-        └── Tests/YOUR_EXTENSION_MODULESpec.cpp           sample UE Automation spec (1 per tool)
+        ├── UnrealAINiagaraModule.cpp               provider + module (1 sample tool)
+        └── Tests/UnrealAINiagaraSpec.cpp           sample UE Automation spec (1 per tool)
 commands/                                                 init / bump-version / get-version / update-core
 Tests/e2e/                                                E2E unreal-mcp-cli tool checks (1 per tool)
 extension.json                                            install-catalog / compat manifest
@@ -67,8 +67,8 @@ python commands/init.py \
 ```
 
 `init` will:
-- replace `YOUR_EXTENSION_MODULE`, `YOUR_EXTENSION_ID`, `YOUR_EXTENSION_DISPLAY_NAME`,
-  `YOUR_TOOL_ID`, `YOUR_GITHUB_USERNAME_REPOSITORY` in file **content and names**;
+- replace `UnrealAINiagara`, `com.ivanmurzak.unreal-ai-niagara`, `Unreal AI Niagara`,
+  `niagara-list-systems`, `IvanMurzak/Unreal-AI-Niagara` in file **content and names**;
 - when `-FeaturePlugin` is given, add it to the `.uplugin` `Plugins` array and uncomment the
   feature-module dependencies in `*.Build.cs`;
 - activate the CI workflows (`*.yml-sample` → `*.yml`).
