@@ -95,19 +95,19 @@ jobs:
 
   # Full test suite per UE version (gated on a fresh version). Same reusable workflow the
   # PR uses; skipped when no self-hosted runner is registered (UNREAL_RUNNER_READY).
-  test-ue-5-6:
-    needs: [check-version-tag]
-    if: needs.check-version-tag.outputs.tag_exists == 'false'
-    uses: ./.github/workflows/test_unreal_plugin.yml
-    with:
-      ue: "5.6"
-
   test-ue-5-7:
     needs: [check-version-tag]
     if: needs.check-version-tag.outputs.tag_exists == 'false'
     uses: ./.github/workflows/test_unreal_plugin.yml
     with:
       ue: "5.7"
+
+  test-ue-5-8:
+    needs: [check-version-tag]
+    if: needs.check-version-tag.outputs.tag_exists == 'false'
+    uses: ./.github/workflows/test_unreal_plugin.yml
+    with:
+      ue: "5.8"
 
   # BuildPlugin per UE version -> zip the packaged plugin that install-extension downloads.
   build:
@@ -117,7 +117,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ue: ["5.6", "5.7"]
+        ue: ["5.7", "5.8"]
     env:
       UE_ROOT: C:\Program Files\Epic Games\UE_${{ matrix.ue }}
     steps:
@@ -158,7 +158,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs:
-      [check-version-tag, prepare-release-notes, test-ue-5-6, test-ue-5-7, build]
+      [check-version-tag, prepare-release-notes, test-ue-5-7, test-ue-5-8, build]
     if: needs.check-version-tag.outputs.tag_exists == 'false'
     steps:
       - name: Download release notes
