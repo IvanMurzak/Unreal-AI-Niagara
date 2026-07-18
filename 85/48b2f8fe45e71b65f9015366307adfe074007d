@@ -1,0 +1,19 @@
+.github/workflows/test_unreal_plugin.yml
+  s_2213bfecb04757::t_9b84fc104f7182 63-144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8548b2f8fe45e71b65f9015366307adfe074007d",
+  "prompts": {},
+  "sessions": {
+    "s_2213bfecb04757": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_2213bfecb04757",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
