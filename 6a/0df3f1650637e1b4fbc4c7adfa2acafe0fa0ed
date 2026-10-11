@@ -1,0 +1,33 @@
+.github/workflows/test_pull_request.yml
+  s_e19ebe83cb6110::t_60b9cd8b615890 96-98
+.github/workflows/test_unreal_plugin.yml
+  s_f593e7fa05bb4b::t_ff9e36373058b5 16-26,51,71-106,268-270,272,278-279,288-297
+README.md
+  s_e19ebe83cb6110::t_8366e87d4b4755 188-190
+docs/agents/ci.md
+  s_e19ebe83cb6110::t_ff4debb22362d9 26-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6a0df3f1650637e1b4fbc4c7adfa2acafe0fa0ed",
+  "prompts": {},
+  "sessions": {
+    "s_e19ebe83cb6110": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "514df444-7709-4c0d-be94-41a9023e64ee",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    },
+    "s_f593e7fa05bb4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea515913-4e3a-4132-812b-63654f40f578",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
